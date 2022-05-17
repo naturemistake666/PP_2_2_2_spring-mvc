@@ -1,10 +1,13 @@
 package web.model;
 
-public class Car {
-    private String model;
-    private int series;
-    private double price;
+import org.springframework.beans.factory.annotation.Autowired;
 
+public class Car {
+    private final String model;
+    private final int series;
+    private final double price;
+
+    @Autowired
     public Car(String model, int series, double price) {
         this.model = model;
         this.series = series;
